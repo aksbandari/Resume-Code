@@ -1,0 +1,41 @@
+@page {
+    size: A4; /* Ensures the page is A4 size */
+    margin: 20mm; /* Adjusts margins for printing */
+}
+
+@media print {
+    body {
+        background: none; /* Removes unnecessary background color */
+        color: black; /* Ensures readability */
+        font-size: 12px; /* Adjust font size for print */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 210mm; /* A4 width */
+        padding: 5mm; /* Proper padding */
+        border: none; /* Removes border */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .section {
+        page-break-inside: avoid; /* Prevents splitting sections */
+    }
+
+    .contact-info p {
+        font-size: 12px;
+    }
+
+    /* Hide unnecessary elements if needed */
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
